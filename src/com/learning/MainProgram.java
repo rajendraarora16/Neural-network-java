@@ -21,7 +21,7 @@ public class MainProgram {
         MainProgram program = new MainProgram();
         Perceptron perceptron = new Perceptron();
         
-        int generationNumber = 0;
+        int epoch = 0;
         
         boolean errorFlag = true;
         
@@ -31,7 +31,7 @@ public class MainProgram {
         
         while(errorFlag) {
             
-            program.printHeading(generationNumber++);
+            program.printHeading(epoch++);
             
             errorFlag = false;
             
@@ -59,8 +59,8 @@ public class MainProgram {
         }
     }
     
-    public void printHeading(int generationNumber) {
-        System.out.println("\n===============================================Generation: "+generationNumber+"===============================================");
+    public void printHeading(int epoch) {
+        System.out.println("\n===============================================epoch: "+epoch+"===============================================");
         System.out.println("    W1  |  W2  |  X1  |  X2  |  Target Result  |  Result  |  Error  |  Weighted sum  |  adjusted W1  |  adjusted W2  ");
         System.out.println("---------------------------------------------------------------------------------------------------------------------");
     }   
